@@ -1,5 +1,5 @@
 ---
-title: "Ronroneros"   # Your Space's name
+title: "Ronroneros ZeroGPU"   # Your Space's name
 emoji: "🐱"              # A fun emoji for your Space
 colorFrom: "blue"        # The starting color for the gradient
 colorTo: "purple"        # The ending color for the gradient
