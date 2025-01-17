@@ -6,11 +6,11 @@ def greet(name):
     return "¡Pspspsps, " + name + "! ¡Sus leales súbditos humanos requieren su presencia!"
 
 def get_cat_image():
-    # Fetch JSON response from The Cat API
-    response = requests.get("https://api.thecatapi.com/v1/images/search")
+    # Fetch the image URL from Cataas
+    response = requests.get("https://cataas.com/cat", timeout=5)
     if response.status_code == 200:
-        # Extract the URL of the first image in the response
-        return response.json()[0]['url']
+        # Directly return the Cataas URL since it serves the image
+        return "https://cataas.com/cat"
 
 # Fetch image before launching the app
 initial_cat_image_url = get_cat_image()
