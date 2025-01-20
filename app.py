@@ -7,10 +7,14 @@ def greet(name):
 
 def get_cat_image():
     # Fetch the image URL from Cataas
-    response = requests.get("https://cataas.com/cat", timeout=5)
-    if response.status_code == 200:
-        # Directly return the Cataas URL since it serves the image
-        return "https://cataas.com/cat"
+    try: 
+        response = requests.get("https://cataas.com/cat", timeout=10)
+        if response.status_code == 200:
+            # Directly return the Cataas URL since it serves the image
+            return "https://cataas.com/cat"
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed: {e}")
+        return "./assets/cat.jpeg"
 
 # Fetch image before launching the app
 initial_cat_image_url = get_cat_image()
